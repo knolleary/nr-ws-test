@@ -1,0 +1,4 @@
+applications:
+- name: nr-nceu-workshop
+  memory: 256MB
+  instances: 1

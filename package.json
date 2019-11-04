@@ -2,11 +2,20 @@
     "name": "ProductionWorkshop",
     "description": "A Node-RED Project",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red": "1.x",
+        "node-red-contrib-cloudantplus": "0.2.0"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flow.json",
             "credentialsFile": "flow_cred.json"
         }
+    },
+    "engines": {
+        "node": "10.x"
+    },
+    "scripts": {
+        "start": "node --max-old-space-size=160 ./node_modules/node-red/red.js --userDir . --settings ./settings.js flow.json"
     }
 }
